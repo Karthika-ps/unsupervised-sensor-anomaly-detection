@@ -1,0 +1,12 @@
+# Local training data
+data/train_data.csv
+
+# Trained models (generated locally)
+models/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
