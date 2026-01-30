@@ -31,10 +31,26 @@ approach that:
 - Samples: ~20,000
 - Sensors: 21 (reduced to 11 after feature optimization)
 
-Note: Remaining Useful Life (RUL) labels are available in the dataset
-but are intentionally NOT used to preserve the unsupervised nature of
-the problem.
+**Note:** Remaining Useful Life (RUL) labels are available in the dataset
+but are intentionally **not used** to preserve the unsupervised nature
+of the problem.
 
+---
+
+## Dataset Access
+
+The dataset used in this project is publicly available on Kaggle:
+
+**NASA CMAPSS Turbofan Engine Sensor Dataset**  
+https://www.kaggle.com/datasets/nasa/cmaps
+
+Due to size constraints, the dataset is not included in this repository.
+
+To run training locally:
+1. Download the dataset from Kaggle
+2. Extract `FD001.csv`
+3. Place it in the following path:
+data/train_data.csv
 ---
 
 ## Approach
@@ -62,7 +78,6 @@ the problem.
 ---
 
 ## Project Structure
-
 unsupervised-sensor-anomaly-detection/
 │
 ├── data/
@@ -93,7 +108,9 @@ During training:
 - Features are standardized
 - Isolation Forest is optimized using score stability
 
-### Model Artifacts
+---
+
+## Model Artifacts
 
 Trained model artifacts are not committed to the repository due to
 file size limitations.
@@ -104,19 +121,7 @@ To generate the model locally, run:
 python train.py
 
 ---
-
-**### Inference**
-
-Inference is performed using the optimized model and preprocessing
-artifacts saved during training.
-
-To run anomaly detection on new sensor data:
-
-```bash
-python inference.py
-
----
-**## Key Takeaways**
+## Key Takeaways
 
 - Demonstrates unsupervised anomaly detection without label leakage
 - Applies feature optimization to improve model robustness
@@ -126,10 +131,9 @@ python inference.py
 
 ---
 
-**## Future Improvements**
+## Future Improvements
 
 - Time-aware anomaly detection
 - Streaming or batch inference pipelines
 - Monitoring and alerting integration
 - Containerized deployment using Docker
-
