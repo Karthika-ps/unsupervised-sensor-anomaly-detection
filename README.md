@@ -93,13 +93,19 @@ During training:
 - Features are standardized
 - Isolation Forest is optimized using score stability
 
-To train the model:
+### Model Artifacts
+
+Trained model artifacts are not committed to the repository due to
+file size limitations.
+
+To generate the model locally, run:
 
 ```bash
 python train.py
+
 ---
 
-### Inference
+**### Inference**
 
 Inference is performed using the optimized model and preprocessing
 artifacts saved during training.
@@ -110,7 +116,7 @@ To run anomaly detection on new sensor data:
 python inference.py
 
 ---
-## Key Takeaways
+**## Key Takeaways**
 
 - Demonstrates unsupervised anomaly detection without label leakage
 - Applies feature optimization to improve model robustness
@@ -120,7 +126,7 @@ python inference.py
 
 ---
 
-## Future Improvements
+**## Future Improvements**
 
 - Time-aware anomaly detection
 - Streaming or batch inference pipelines
