@@ -119,7 +119,7 @@ To generate the model locally, run:
 
 ```bash
 python train.py
-
+```
 ---
 ## Key Takeaways
 
