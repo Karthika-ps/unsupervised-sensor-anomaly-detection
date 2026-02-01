@@ -137,3 +137,14 @@ python train.py
 - Streaming or batch inference pipelines
 - Monitoring and alerting integration
 - Containerized deployment using Docker
+
+---
+
+## Docker (WSL)
+
+This project was containerized and tested using Docker Engine on Linux (WSL).
+Docker Desktop is not required.
+
+Inference can be run via:
+docker build -t sensor-anomaly-inference .
+docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/models:/app/models sensor-anomaly-inference
